@@ -5,8 +5,11 @@ import tensorflow as tf
 from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 
 # 加载模型
-with st.spinner("加载模型中..."):
-    model = tf.keras.models.load_model("D:/st_courses/02-Projects/p-01-animal_app/model/animal.hdf5")
+#with st.spinner("加载模型中..."):
+   # model = tf.keras.models.load_model("D:/st_courses/02-Projects/refuse_app/model/refuse.hdf5")
+from tensorflow import keras
+fashion_mnist=keras.datasets.fashion_mnist
+(train_images,train_labels),(test_images,test_labels)=fashion_mnist.load_data()
 
 # 用户上传图片
 upload_file = st.file_uploader("请选择一张图片上传", type=['jpg','png'])
